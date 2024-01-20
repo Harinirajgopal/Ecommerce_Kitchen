@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { initializeApp } from "firebase/app";
 import {getAuth,createUserWithEmailAndPassword} from "firebase/auth"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./App.css"
 function Register() {
     const [name, setName] = useState("")
@@ -9,6 +9,8 @@ function Register() {
     const [mobile, setMobile] = useState("")
     const [pswd, setPswd] = useState("")
     const [cpswd, setCpswd] = useState("")
+
+    const navigate=useNavigate()
 
     const firebaseConfig = {
         apiKey: "AIzaSyCBrdNQODqSaqrbLWb0mFxqh0cNVvq_SNw",
@@ -38,7 +40,7 @@ function Register() {
         createUserWithEmailAndPassword(reg,obj.Email,obj.Password)
         .then(()=>{
             alert(" registered successfully")
-            // navigate ("/login")
+            navigate ("/login")
         })
         .catch(()=>{
             alert("error")
