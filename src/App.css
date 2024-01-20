@@ -1,0 +1,29 @@
+
+.footer{
+        background-color:rgb(192, 141, 166);
+        border:2px solid black;
+        border-radius: 15px;
+    }
+    
+    @media(max-width:768px){
+        .footer{
+            text-align: center;
+        }
+    }
+
+    #hello{
+        
+        background-color: rgb(215, 190, 203);
+        
+    }
+    #a{
+        outline: 2px solid rgb(110, 113, 125);
+    }
+    #b{
+        outline: 2px solid rgb(110, 113, 125);
+    }
+    #c{
+        outline: 2px solid rgb(110, 113, 125);
+    }
+
+
